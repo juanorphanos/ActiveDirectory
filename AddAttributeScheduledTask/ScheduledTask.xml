@@ -44,7 +44,7 @@
   <Actions Context="Author">
     <Exec>
       <Command>C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Command>
-      <Arguments>-nologo ""C:\Script\Script.ps1 -username '$(SamAccountName)'""</Arguments>
+      <Arguments>-nologo ""C:\AutoPopulateCompanyScript\Script.ps1 -username '$(SamAccountName)'""</Arguments>
     </Exec>
   </Actions>
 </Task>
