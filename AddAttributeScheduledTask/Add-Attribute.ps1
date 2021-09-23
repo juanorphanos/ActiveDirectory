@@ -15,12 +15,12 @@ $logFile = "C:\AutoPopulateCompanyScript\log-$day.log"
 $company = 'Contoso'
 
 $aduser = Get-ADUser -properties Description -Identity $username
-   try{
+   try {
    Set-ADUser -Identity $aduser -Company $company
             $changemessage = "$fecha : User $username, modified, attribute Company set in $company"
             Out-File -FilePath $logFile -Append -InputObject $changemessage
-         }
-        catch{
-            $failedMessage = "$fecha : Error, could not set attribute Company as $company for user $username"
-            Out-File -FilePath $logFile -Append -InputObject $failedmessage
+       }
+   catch {
+          $failedMessage = "$fecha : Error, could not set attribute Company as $company for user $username"
+          Out-File -FilePath $logFile -Append -InputObject $failedmessage
         }
